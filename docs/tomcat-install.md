@@ -66,8 +66,8 @@
 ```
 
 11. tomcat manager 설정
-```sh
    1) tomcat-users.xml 설정
+```sh
       # vi /usr/local/poscodx/tomcat/conf/tomcat-users.xml
 ========================================================
 <tomcat-users>
@@ -82,11 +82,11 @@
   <user username="admin" password="manager" roles="admin,manager,manager-gui, manager-script, manager-jmx, manager-status"/>
 
 </tomcat-users>
+========================================================
 ```
 
-```sh
-========================================================
    2) /usr/local/poscodx/tomcat/webapps/manager/META-INF/context.xml
+```sh
 ========================================================
  주석 처리
 <Context>
