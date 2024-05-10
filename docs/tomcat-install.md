@@ -36,8 +36,8 @@
 ```
 
 6. 방화벽(firewalld, 8080 포트) 열기
-   - [/etc/firewalld/zones/public.xml](https://github.com/bitacademy-poscodx/rocky-practices/blob/main/lx/etc/firewalld/zones/public.xml) 생성
-   - [/usr/lib/firewalld/services/tomcat.xml](https://github.com/bitacademy-poscodx/rocky-practices/blob/main/lx/usr/lib/firewalld/services/tomcat.xml) 생성
+   - [/etc/firewalld/zones/public.xml](https://github.com/Jiyoongrace/rocky-practices/blob/main/lx/etc/firewalld/zones/public.xml) 생성
+   - [/usr/lib/firewalld/services/tomcat.xml](https://github.com/Jiyoongrace/rocky-practices/blob/main/lx/usr/lib/firewalld/services/tomcat.xml) 생성
    - 방화벽 서비스 재실행
    ```sh
    # systemctl stop firewalld
@@ -52,7 +52,7 @@
 # /usr/local/poscodx/tomcat/bin/catalina.sh stop
 ```
 
-9. 서비스 등록 하기([/usr/lib/systemd/system/tomcat.service](https://github.com/bitacademy-poscodx/rocky-practices/blob/main/lx/usr/lib/systemd/system/tomcat.service))
+9. 서비스 등록 하기([/usr/lib/systemd/system/tomcat.service](https://github.com/Jiyoongrace/rocky-practices/blob/main/lx/usr/lib/systemd/system/tomcat.service))
 ```sh
 # systemctl enable tomcat
 ```
@@ -65,8 +65,8 @@
 ```
 
 11. tomcat manager 설정
-   - [/usr/local/poscodx/tomcat/conf/tomcat-users.xml](https://github.com/bitacademy-poscodx/rocky-practices/blob/main/lx/usr/local/poscodx/tomcat/conf/tomcat-users.xml) 수정
-   - [/usr/local/poscodx/tomcat/webapps/manager/META-INF/context.xml](https://github.com/bitacademy-poscodx/rocky-practices/blob/main/lx/usr/local/poscodx/tomcat/webapps/manager/META-INF/context.xml) 수정
+   - [/usr/local/poscodx/tomcat/conf/tomcat-users.xml](https://github.com/Jiyoongrace/rocky-practices/blob/main/lx/usr/local/poscodx/tomcat/conf/tomcat-users.xml) 수정
+   - [/usr/local/poscodx/tomcat/webapps/manager/META-INF/context.xml](https://github.com/Jiyoongrace/rocky-practices/blob/main/lx/usr/local/poscodx/tomcat/webapps/manager/META-INF/context.xml) 수정
       
 12. tomcat 재시작
 ```sh
