@@ -33,17 +33,17 @@
 3. 소스 다운로드
 ```bash
 # cd
-# wget https://downloads.mariadb.org/interstitial/mariadb-mariadb-10.6.17/source/mariadb-mariadb-10.6.17.tar.gz 
+# wget https://downloads.mariadb.org/interstitial/mariadb-10.6.17/source/mariadb-10.6.17.tar.gz 
 ```
 
 4. 압축 풀기
 ```bash
-# tar xvfz mariadb-10.6.17.tar.gz
+# tar xvfz mariadb-mariadb-10.6.17.tar.gz
 ```
 
 5. 소스 디렉토리 이동
 ```bash
-# cd mariadb-10.6.17
+# cd mariadb-mariadb-10.6.17
 ```
 
 6. 빌드 환경 설정 
@@ -118,47 +118,10 @@ mysql      968   865  0 16:23 ?        00:00:00 /usr/local/poscodx/mariadb/bin/m
 # ps -ef | grep mysql
 ```
 
-19. mariadb systemd service script(mariadb.service) 작성
-```
-#
-# mariadb systemd service file
-#
+19. mariadb systemd service script([/usr/lib/systemd/system/mariadb.service](https://github.com/Jiyoongrace/rocky-practices/blob/main/lx/usr/lib/systemd/system/mariadb.service)) 작성
 
-[Unit]
-Description=MariaDB 10.6.11 Server
-After=network.target
-After=syslog.target
-
-[Install]
-WantedBy=multi-user.target
-Alias=mariadb.service
-
-[Service]
-User=mysql
-Group=mysql
-
-# Execute pre and post scripts as root
-PermissionsStartOnly=true
-
-# Needed to create system tables etc.
-# ExecStartPre=/usr/bin/mysql-systemd-start pre
-
-# Start main service
-ExecStart=/usr/local/poscodx/mariadb/bin/mysqld_safe
-
-# Don't signal startup success before a ping works
-# ExecStartPost=/usr/bin/mysql-systemd-start post
-
-# Give up if ping don't get an answer
-TimeoutSec=600
-Restart=always
-PrivateTmp=false
-```
-
-21. 서비스(데몬, Daemon) 등록/시작/중지
+20. 서비스(데몬, Daemon) 등록/시작/중지
 ```bash
-# ls /etc/systemd/system/mariadb.service
-/etc/systemd/system/mariadb.service
 # systemctl enable mariadb.service
 # systemctl start mariadb
 # ps -ef | grep mysql
@@ -170,6 +133,3 @@ PrivateTmp=false
 password:
 MariaDB [(none)]>
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI5MDQxMjEwXX0=
--->
