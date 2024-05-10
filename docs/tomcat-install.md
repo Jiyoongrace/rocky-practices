@@ -45,7 +45,7 @@
    ```
 
 7. 브라우저로 접근 하기
-   http://192.168.80.203:8080
+   http://IP_ADDRESS:8080
 
 8. 중지 시키기
 ```sh
@@ -76,4 +76,4 @@
 ```
 
 13. Manager 앱 접근
-http://192.168.80.131/manager
+http://IP_ADDRESS/manager
