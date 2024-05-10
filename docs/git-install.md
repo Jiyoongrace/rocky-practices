@@ -46,7 +46,7 @@
 # ln -s git-2.45.0 git
 ```
 
-9. 설정([/etc/profile](https://github.com/bitacademy-poscodx/rocky-practices/blob/main/lx/etc/profile))
+9. 설정([/etc/profile](https://github.com/Jiyoongrace/rocky-practices/blob/main/lx/etc/profile))
 ```sh
 export PATH=$PATH:/usr/local/poscodx/git/bin
 ```
