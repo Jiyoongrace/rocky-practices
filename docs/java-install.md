@@ -25,7 +25,7 @@
 # ln -s /usr/local/poscodx/jdk-17.0.10 /usr/local/poscodx/java
 ```
 
-6. 설정(/etc/profile)
+6. 설정([/etc/profile](https://github.com/bitacademy-poscodx/rocky-practices/blob/main/lx/etc/profile))
 ```sh
 # java
 export JAVA_HOME=/usr/local/poscodx/java
